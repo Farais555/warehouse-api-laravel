@@ -11,4 +11,12 @@ class Income extends Model
     protected $fillable = [
         'product_id', 'store_id', 'sold', 'onDuty'
     ];
+
+    public function product() {
+        return $this->belongsTo(Product::class);
+    }
+
+    public function store() {
+        return $this->belongsTo(Store::class);
+    }
 }

@@ -128,9 +128,9 @@ class ProductionController extends Controller
         ]);
     }
 
-        // delete data
-        public function destroy(string $id) {
-            $production = Production::find($id);
+    // delete data
+    public function destroy(string $id) {
+        $production = Production::find($id);
 
         if (!$production) {
             return response()->json([
