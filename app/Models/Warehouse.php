@@ -9,6 +9,10 @@ class Warehouse extends Model
     protected $table = 'warehouses';
 
     protected $fillable = [
-        'name_product', 'stock'
+        'product_id', 'stock'
     ];
+
+    public function product() {
+        return $this->belongsTo(Product::class);
+    }
 }

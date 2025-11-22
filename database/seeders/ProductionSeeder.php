@@ -14,7 +14,7 @@ class ProductionSeeder extends Seeder
     public function run(): void
     {
         Production::create([
-            'name_product' => '1',
+            'product_id' => '1',
             'quantity' => '100',
             'production_date' => '2025-11-11',
             'description' => '-',
@@ -22,7 +22,7 @@ class ProductionSeeder extends Seeder
         ]);
 
         Production::create([
-            'name_product' => '2',
+            'product_id' => '2',
             'quantity' => '50',
             'production_date' => '2025-11-11',
             'description' => '-',
@@ -30,7 +30,7 @@ class ProductionSeeder extends Seeder
         ]);
 
         Production::create([
-            'name_product' => '3',
+            'product_id' => '3',
             'quantity' => '48',
             'production_date' => '2025-11-11',
             'description' => '-',
@@ -38,7 +38,7 @@ class ProductionSeeder extends Seeder
         ]);
 
         Production::create([
-            'name_product' => '4',
+            'product_id' => '4',
             'quantity' => '30',
             'production_date' => '2025-11-11',
             'description' => '-',
@@ -46,7 +46,7 @@ class ProductionSeeder extends Seeder
         ]);
 
         Production::create([
-            'name_product' => '5',
+            'product_id' => '5',
             'quantity' => '20',
             'production_date' => '2025-11-11',
             'description' => '-',

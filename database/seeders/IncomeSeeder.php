@@ -14,50 +14,50 @@ class IncomeSeeder extends Seeder
     public function run(): void
     {
         Income::create([
-            'name_product' => '1',
-            'name_store' => '1',
+            'product_id' => '1',
+            'store_id' => '1',
             'sold' => '37',
             'onDuty' => '1'
         ]);
 
         Income::create([
-            'name_product' => '1',
-            'name_store' => '2',
+            'product_id' => '1',
+            'store_id' => '2',
             'sold' => '17',
             'onDuty' => '1'
         ]);
 
         Income::create([
-            'name_product' => '1',
-            'name_store' => '3',
+            'product_id' => '1',
+            'store_id' => '3',
             'sold' => '12',
             'onDuty' => '1'
         ]);
 
         Income::create([
-            'name_product' => '2',
-            'name_store' => '1',
+            'product_id' => '2',
+            'store_id' => '1',
             'sold' => '20',
             'onDuty' => '1'
         ]);
 
         Income::create([
-            'name_product' => '4',
-            'name_store' => '3',
+            'product_id' => '4',
+            'store_id' => '3',
             'sold' => '19',
             'onDuty' => '1'
         ]);
 
         Income::create([
-            'name_product' => '5',
-            'name_store' => '3',
+            'product_id' => '5',
+            'store_id' => '3',
             'sold' => '19',
             'onDuty' => '1'
         ]);
 
         Income::create([
-            'name_product' => '3',
-            'name_store' => '4',
+            'product_id' => '3',
+            'store_id' => '4',
             'sold' => '13',
             'onDuty' => '1'
         ]);

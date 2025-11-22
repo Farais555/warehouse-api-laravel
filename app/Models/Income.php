@@ -9,6 +9,6 @@ class Income extends Model
     protected $table = 'incomes';
 
     protected $fillable = [
-        'name', 'store', 'sold', 'onDuty'
+        'product_id', 'store_id', 'sold', 'onDuty'
     ];
 }

@@ -9,6 +9,10 @@ class Production extends Model
     protected $table = 'productions';
 
     protected $fillable = [
-        'name', 'quantity', 'production_date', 'description', 'onDuty'
+        'product_id', 'quantity', 'production_date', 'description', 'onDuty'
     ];
+
+    public function product() {
+        return $this->belongsTo(Product::class);
+    }
 }

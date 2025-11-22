@@ -14,56 +14,56 @@ class SellSeeder extends Seeder
     public function run(): void
     {
         Sell::create([
-            'name_product' => '1',
-            'name_store' => '1',
+            'product_id' => '1',
+            'store_id' => '1',
             'quantity' => '48',
             'date_sell' => '2025-11-12',
             'onDuty' => '1'
         ]);
 
         Sell::create([
-            'name_product' => '1',
-            'name_store' => '2',
+            'product_id' => '1',
+            'store_id' => '2',
             'quantity' => '20',
             'date_sell' => '2025-11-12',
             'onDuty' => '1'
         ]);
 
         Sell::create([
-            'name_product' => '1',
-            'name_store' => '3',
+            'product_id' => '1',
+            'store_id' => '3',
             'quantity' => '15',
             'date_sell' => '2025-11-12',
             'onDuty' => '1'
         ]);
 
         Sell::create([
-            'name_product' => '2',
-            'name_store' => '1',
+            'product_id' => '2',
+            'store_id' => '1',
             'quantity' => '24',
             'date_sell' => '2025-11-12',
             'onDuty' => '1'
         ]);
 
         Sell::create([
-            'name_product' => '4',
-            'name_store' => '3',
+            'product_id' => '4',
+            'store_id' => '3',
             'quantity' => '20',
             'date_sell' => '2025-11-12',
             'onDuty' => '1'
         ]);
 
         Sell::create([
-            'name_product' => '5',
-            'name_store' => '3',
+            'product_id' => '5',
+            'store_id' => '3',
             'quantity' => '20',
             'date_sell' => '2025-11-12',
             'onDuty' => '1'
         ]);
 
         Sell::create([
-            'name_product' => '3',
-            'name_store' => '4',
+            'product_id' => '3',
+            'store_id' => '4',
             'quantity' => '15',
             'date_sell' => '2025-11-12',
             'onDuty' => '1'

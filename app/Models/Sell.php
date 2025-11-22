@@ -9,6 +9,14 @@ class Sell extends Model
     protected $table = 'sells';
 
     protected $fillable = [
-        'name', 'store', 'quantity', 'date_sell', 'onDuty'
+        'product_id', 'store_id', 'quantity', 'date_sell', 'onDuty'
     ];
+
+    public function product() {
+        return $this->belongsTo(Product::class);
+    }
+
+    public function store() {
+        return $this->belongsTo(Store::class);
+    }
 }
