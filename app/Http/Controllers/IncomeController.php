@@ -33,7 +33,7 @@ class IncomeController extends Controller
             'product_id' => 'required|exists:products,id',
             'store_id' => 'required|exists:stores,id',
             'sold' => 'required|numeric',
-            'onDuty' => 'required|integer'
+            'user_id' => 'required|exists:users,id'
         ]);
 
         // 2.cek validator error
@@ -49,7 +49,7 @@ class IncomeController extends Controller
             'product_id' => $request->product_id,
             'store_id' => $request->store_id,
             'sold' => $request->sold,
-            'onDuty' => $request->onDuty
+            'user_id' => $request->user_id
         ]);
 
         // 4.response
@@ -77,7 +77,7 @@ class IncomeController extends Controller
             "data" => $income
         ], 200);
     }
-    
+
     // update data production
     public function update(string $id, Request $request) {
         // 1.mencari data
@@ -89,14 +89,14 @@ class IncomeController extends Controller
                 "message" => "Income data not found"
             ], 404);
         }
-    
+
 
         // 2.validator
         $validator = Validator::make($request->all(), [
             'product_id' => 'required|exists:products,id',
             'store_id' => 'required|exists:stores,id',
             'sold' => 'required|numeric',
-            'onDuty' => 'required|integer'
+            'user_id' => 'required|exists:users,id'
         ]);
 
         if($validator->fails()) {
@@ -111,7 +111,7 @@ class IncomeController extends Controller
             'product_id' => $request->product_id,
             'store_id' => $request->store_id,
             'sold' => $request->sold,
-            'onDuty' => $request->onDuty
+            'user_id' => $request->user_id
         ];
 
         // 4.update data baru ke database

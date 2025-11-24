@@ -9,7 +9,7 @@ class Warehouse extends Model
     protected $table = 'warehouses';
 
     protected $fillable = [
-        'product_id', 'stock'
+        'product_id', 'stock', 'date'
     ];
 
     public function product() {

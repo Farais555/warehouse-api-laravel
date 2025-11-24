@@ -9,7 +9,7 @@ class Income extends Model
     protected $table = 'incomes';
 
     protected $fillable = [
-        'product_id', 'store_id', 'sold', 'onDuty'
+        'product_id', 'store_id', 'sold', 'user_id'
     ];
 
     public function product() {
@@ -18,5 +18,9 @@ class Income extends Model
 
     public function store() {
         return $this->belongsTo(Store::class);
+    }
+
+    public function user() {
+        return $this->belongsTo(User::class);
     }
 }

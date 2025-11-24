@@ -18,7 +18,7 @@ class SellSeeder extends Seeder
             'store_id' => '1',
             'quantity' => '48',
             'date_sell' => '2025-11-12',
-            'onDuty' => '1'
+            'user_id' => '1'
         ]);
 
         Sell::create([
@@ -26,7 +26,7 @@ class SellSeeder extends Seeder
             'store_id' => '2',
             'quantity' => '20',
             'date_sell' => '2025-11-12',
-            'onDuty' => '1'
+            'user_id' => '1'
         ]);
 
         Sell::create([
@@ -34,7 +34,7 @@ class SellSeeder extends Seeder
             'store_id' => '3',
             'quantity' => '15',
             'date_sell' => '2025-11-12',
-            'onDuty' => '1'
+            'user_id' => '1'
         ]);
 
         Sell::create([
@@ -42,7 +42,7 @@ class SellSeeder extends Seeder
             'store_id' => '1',
             'quantity' => '24',
             'date_sell' => '2025-11-12',
-            'onDuty' => '1'
+            'user_id' => '1'
         ]);
 
         Sell::create([
@@ -50,7 +50,7 @@ class SellSeeder extends Seeder
             'store_id' => '3',
             'quantity' => '20',
             'date_sell' => '2025-11-12',
-            'onDuty' => '1'
+            'user_id' => '1'
         ]);
 
         Sell::create([
@@ -58,7 +58,7 @@ class SellSeeder extends Seeder
             'store_id' => '3',
             'quantity' => '20',
             'date_sell' => '2025-11-12',
-            'onDuty' => '1'
+            'user_id' => '1'
         ]);
 
         Sell::create([
@@ -66,7 +66,7 @@ class SellSeeder extends Seeder
             'store_id' => '4',
             'quantity' => '15',
             'date_sell' => '2025-11-12',
-            'onDuty' => '1'
+            'user_id' => '1'
         ]);
     }
 }

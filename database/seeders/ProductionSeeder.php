@@ -18,7 +18,7 @@ class ProductionSeeder extends Seeder
             'quantity' => '100',
             'production_date' => '2025-11-11',
             'description' => '-',
-            'onDuty' => '1',        
+            'user_id' => '1',
         ]);
 
         Production::create([
@@ -26,7 +26,7 @@ class ProductionSeeder extends Seeder
             'quantity' => '50',
             'production_date' => '2025-11-11',
             'description' => '-',
-            'onDuty' => '1',        
+            'user_id' => '1',
         ]);
 
         Production::create([
@@ -34,7 +34,7 @@ class ProductionSeeder extends Seeder
             'quantity' => '48',
             'production_date' => '2025-11-11',
             'description' => '-',
-            'onDuty' => '1',        
+            'user_id' => '1',
         ]);
 
         Production::create([
@@ -42,7 +42,7 @@ class ProductionSeeder extends Seeder
             'quantity' => '30',
             'production_date' => '2025-11-11',
             'description' => '-',
-            'onDuty' => '1',        
+            'user_id' => '1',
         ]);
 
         Production::create([
@@ -50,7 +50,7 @@ class ProductionSeeder extends Seeder
             'quantity' => '20',
             'production_date' => '2025-11-11',
             'description' => '-',
-            'onDuty' => '1',        
+            'user_id' => '1',
         ]);
     }
 }

@@ -18,7 +18,7 @@ class SellController extends Controller
                 'message' => 'No data sell'
             ], 200);
         }
-        
+
         return response()->json([
             'success' => true,
             'message' => 'Get all data sell',
@@ -34,7 +34,7 @@ class SellController extends Controller
             'store_id' => 'required|exists:stores,id',
             'quantity' => 'required|integer|min:1',
             'date_sell' => 'required|date',
-            'onDuty' => 'required|integer'
+            'user_id' => 'required|exists:users,id'
         ]);
 
         // 2.cek validator error
@@ -51,7 +51,7 @@ class SellController extends Controller
             'store_id' => $request->store_id,
             'quantity' => $request->quantity,
             'date_sell' => $request->date_sell,
-            'onDuty' => $request->onDuty,
+            'user_id' => $request->user_id,
         ]);
 
         // 4.response
@@ -71,7 +71,7 @@ class SellController extends Controller
                 'success' => false,
                 'message' => 'Data sell not found'
             ], 404);
-        } 
+        }
 
         return response()->json([
             'success' => true,
@@ -91,7 +91,7 @@ class SellController extends Controller
                 "message" => "Data sell not found"
             ], 404);
         }
-    
+
 
         // 2.validator
         $validator = Validator::make($request->all(), [
@@ -99,7 +99,7 @@ class SellController extends Controller
             'store_id' => 'required|exists:stores,id',
             'quantity' => 'required|integer|min:1',
             'date_sell' => 'required|date',
-            'onDuty' => 'required|integer'
+            'user_id' => 'required|exists:users,id'
         ]);
 
         if($validator->fails()) {
@@ -115,7 +115,7 @@ class SellController extends Controller
             'store_id' => $request->store_id,
             'quantity' => $request->quantity,
             'date_sell' => $request->date_sell,
-            'onDuty' => $request->onDuty,
+            'user_id' => $request->user_id,
         ];
 
         // 4.update data baru ke database
@@ -127,8 +127,8 @@ class SellController extends Controller
             'message' => 'Data sell update succesfully',
             'data' => $sell
         ]);
-    }  
-    
+    }
+
         // delete data
         public function destroy(string $id) {
             $sell = Sell::find($id);

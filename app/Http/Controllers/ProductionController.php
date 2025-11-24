@@ -34,7 +34,7 @@ class ProductionController extends Controller
             'quantity' => 'required|integer|min:1',
             'production_date' => 'required|date',
             'description' => 'nullable|string',
-            'onDuty' => 'required|integer'
+            'user_id' => 'required|exists:users,id'
         ]);
 
         // 2.cek validator error
@@ -51,7 +51,7 @@ class ProductionController extends Controller
             'quantity' => $request->quantity,
             'production_date' => $request->production_date,
             'description' => $request->description,
-            'onDuty' => $request->onDuty
+            'user_id' => $request->user_id
         ]);
 
         // 4.response
@@ -91,7 +91,7 @@ class ProductionController extends Controller
                 "message" => "Production not found"
             ], 404);
         }
-    
+
 
         // 2.validator
         $validator = Validator::make($request->all(), [
@@ -99,7 +99,7 @@ class ProductionController extends Controller
             'quantity' => 'required|integer|min:1',
             'production_date' => 'nullable|date',
             'description' => 'nullable|string',
-            'onDuty' => 'required|integer'
+            'user_id' => 'required|exists:users,id'
         ]);
 
         if($validator->fails()) {
@@ -114,7 +114,7 @@ class ProductionController extends Controller
             'product_id' => $request->product_id,
             'quantity' => $request->quantity,
             'description' => $request->description,
-            'onDuty' => $request->onDuty
+            'user_id' => $request->user_id
         ];
 
         // 4.update data baru ke database

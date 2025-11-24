@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('quantity');
             $table->date('production_date');
             $table->string('description')->nullable();
-            $table->unsignedBigInteger('onDuty');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

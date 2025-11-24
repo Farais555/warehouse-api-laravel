@@ -17,49 +17,49 @@ class IncomeSeeder extends Seeder
             'product_id' => '1',
             'store_id' => '1',
             'sold' => '37',
-            'onDuty' => '1'
+            'user_id' => '1'
         ]);
 
         Income::create([
             'product_id' => '1',
             'store_id' => '2',
             'sold' => '17',
-            'onDuty' => '1'
+            'user_id' => '1'
         ]);
 
         Income::create([
             'product_id' => '1',
             'store_id' => '3',
             'sold' => '12',
-            'onDuty' => '1'
+            'user_id' => '1'
         ]);
 
         Income::create([
             'product_id' => '2',
             'store_id' => '1',
             'sold' => '20',
-            'onDuty' => '1'
+            'user_id' => '1'
         ]);
 
         Income::create([
             'product_id' => '4',
             'store_id' => '3',
             'sold' => '19',
-            'onDuty' => '1'
+            'user_id' => '1'
         ]);
 
         Income::create([
             'product_id' => '5',
             'store_id' => '3',
             'sold' => '19',
-            'onDuty' => '1'
+            'user_id' => '1'
         ]);
 
         Income::create([
             'product_id' => '3',
             'store_id' => '4',
             'sold' => '13',
-            'onDuty' => '1'
+            'user_id' => '1'
         ]);
     }
 }
