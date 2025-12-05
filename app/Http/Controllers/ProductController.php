@@ -11,20 +11,13 @@ class ProductController extends Controller
 {
     //tampilkan semua produk
     public function index() {
-        $product = Product::all();
-
-        if ($product->isEmpty()) {
-            return response()->json([
-                "success" => true,
-                "message" => "Product not found!"
-            ], 200);
-        }
+        $product = Product::paginate(5);
 
         return response()->json([
             "success" => true,
             "message" => "Get all Product",
             "data" => $product
-        ]);
+        ], 200);
     }
 
     // tambah data
@@ -137,7 +130,7 @@ class ProductController extends Controller
             'success' => true,
             'message' => 'Product update successfully',
             'data' => $product
-        ], 200);           
+        ], 200);
     }
 
     // delete data

@@ -9,14 +9,7 @@ class WarehouseController extends Controller
 {
     //tampilkan semua data warehouse
     public function index() {
-        $warehouse = Warehouse::with('product')->get();
-
-        if ($warehouse->isEmpty()) {
-            return response()->json([
-                'success' => true,
-                'message' => 'Warehouse is empty'
-            ], 200);
-        }
+        $warehouse = Warehouse::with('product')->paginate(5);
 
         return response()->json([
             'success' => true,

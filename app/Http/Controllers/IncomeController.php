@@ -10,20 +10,13 @@ class IncomeController extends Controller
 {
     //tampilkan data
     public function index() {
-        $income = Income::with('product', 'store')->get();
-
-        if ($income->isEmpty()) {
-            return response()->json([
-                "success" => true,
-                "message" => "Income data not found"
-            ], 200);
-        }
+        $income = Income::with('product', 'store')->paginate(5);
 
         return response()->json([
             "success" => true,
             "message" => "Get all Income data",
             "data" => $income
-        ]);
+        ], 200);
     }
 
    // tambah data

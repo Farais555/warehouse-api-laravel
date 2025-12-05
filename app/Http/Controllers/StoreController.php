@@ -10,20 +10,13 @@ class StoreController extends Controller
 {
     //tampilkan semua store
     public function index() {
-        $store = Store::all();
-
-        if ($store->isEmpty()) {
-            return response()->json([
-                "success" => true,
-                "message" => "Store not found!"
-        ], 200);
-        }
+        $store = Store::paginate(5);
 
         return response()->json([
             "success" => true,
             "message" => "Get all Store",
             "data" => $store
-        ]);
+        ], 200);
     }
 
     // tambah data
@@ -129,7 +122,7 @@ class StoreController extends Controller
             'success' => true,
             'message' => 'Store update successfully',
             'data' => $store
-        ], 200);           
+        ], 200);
     }
 
     // delete data

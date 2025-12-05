@@ -16,7 +16,7 @@ class AuthController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:8'
+            'password' => 'required|min:8',
         ]);
 
         // 2. cek validator
@@ -81,7 +81,7 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request) {
-        // try 
+        // try
         // 1. invalidasi token
 
         // 2. cek apkaah berhasil

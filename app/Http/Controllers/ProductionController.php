@@ -10,20 +10,13 @@ class ProductionController extends Controller
 {
     //tampilkan semua produk
     public function index() {
-        $production = Production::with('product')->get();
-
-        if ($production->isEmpty()) {
-            return response()->json([
-                "success" => true,
-                "message" => "Production not found"
-            ], 200);
-        }
+        $production = Production::with('product')->paginate(5);
 
         return response()->json([
             "success" => true,
             "message" => "Get all Production",
             "data" => $production
-        ]);
+        ], 200);
     }
 
     // tambah data

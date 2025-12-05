@@ -10,20 +10,13 @@ class SellController extends Controller
 {
     //tampilkan semua penjualan
     public function index() {
-        $sell = Sell::with('product', 'store')->get();
-
-        if ($sell->isEmpty()) {
-            return response()->json([
-                'success' => true,
-                'message' => 'No data sell'
-            ], 200);
-        }
+        $sell = Sell::with('product', 'store')->paginate(5);
 
         return response()->json([
             'success' => true,
             'message' => 'Get all data sell',
             'data' => $sell
-        ]);
+        ], 200);
     }
 
     // tambah data penjualan
